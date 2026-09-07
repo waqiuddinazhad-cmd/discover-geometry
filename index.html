@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover Geometry — a hands-on sandbox for discovering angle relationships." />
+    <title>Discover Geometry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="topbar">
+          <a class="brand" href="#top" aria-label="Discover Geometry home"><span class="brand-mark">∠</span> Discover Geometry</a>
+          <a class="top-link" href="#how-it-works">The learning idea <span>↓</span></a>
+        </div>
+        <div class="hero-copy" id="top">
+          <p class="eyebrow">A sandbox for mathematical discovery</p>
+          <h1 id="page-title">Don’t tell them.<br /><em>Let them find it.</em></h1>
+          <p class="lede">Students build parallel lines, draw a transversal, and physically move angles until the relationships become something they can see and feel.</p>
+          <a class="button" href="#sandbox">Enter the sandbox <span>→</span></a>
+        </div>
+        <div class="hero-geometry" aria-hidden="true">
+          <span class="hero-line line-orange"></span><span class="hero-line line-blue"></span><span class="hero-transversal"></span>
+          <span class="hero-arc arc-one"></span><span class="hero-arc arc-two"></span>
+        </div>
+      </section>
+
+      <section class="sandbox-section" id="sandbox" aria-labelledby="sandbox-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Try the interaction</p><h2 id="sandbox-title">Build the geometry.</h2></div>
+          <button id="reset" class="reset" type="button">↺ Reset playground</button>
+        </div>
+        <div class="playground-shell">
+          <aside class="instruction-card">
+            <p class="step-count" id="step-count">01 / 03</p>
+            <h3 id="instruction-title">Draw your first line</h3>
+            <p id="instruction-copy">Make a long stroke anywhere on the canvas. It will snap into a clean, infinite line.</p>
+            <div class="legend"><span><i class="orange-dot"></i> Line 1</span><span><i class="blue-dot"></i> Line 2</span></div>
+            <div id="relationship" class="relationship" aria-live="polite"></div>
+          </aside>
+          <div class="canvas-wrap">
+            <canvas id="geometry-canvas" aria-label="Interactive geometry construction canvas"></canvas>
+            <div id="canvas-message" class="canvas-message" role="status"></div>
+            <div class="canvas-label label-one">LINE 1</div>
+            <div class="canvas-label label-two">LINE 2</div>
+            <div id="parallel-badge" class="parallel-badge">∥ &nbsp; parallel</div>
+          </div>
+          <aside class="control-card">
+            <p class="eyebrow">Controls</p>
+            <div class="control-row"><span class="control-icon draw-icon">╲</span><p><strong>Draw</strong> lines directly on the canvas</p></div>
+            <div class="control-row"><span class="control-icon">●</span><p><strong>Drag</strong> the blue end handle to align it</p></div>
+            <div class="control-row wedge-control"><span class="control-icon">◔</span><p><strong>Move, spin &amp; resize</strong> an angle wedge once it appears</p></div>
+          </aside>
+        </div>
+        <p class="sandbox-note">A learning interaction, not a quiz: the geometry responds to the student’s own construction.</p>
+      </section>
+
+      <section class="learning" id="how-it-works" aria-labelledby="learning-title">
+        <div class="learning-intro"><p class="eyebrow">The learning design</p><h2 id="learning-title">Every action earns its name.</h2><p>Vocabulary arrives after the student has made the relationship happen—not before.</p></div>
+        <div class="learning-grid">
+          <article><span class="number">01</span><h3>Construct</h3><p>Freehand marks become precise mathematical objects. Students own the starting conditions.</p></article>
+          <article><span class="number">02</span><h3>Notice</h3><p>Magnetic alignment makes parallelism visible while each line keeps its identity and direction.</p></article>
+          <article><span class="number">03</span><h3>Manipulate</h3><p>Moving a wedge separates angle measure from arm length, position, and orientation.</p></article>
+          <article><span class="number">04</span><h3>Name</h3><p>Only once a match is made do ideas such as corresponding or alternate interior angles appear.</p></article>
+        </div>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <div class="principle-art" aria-hidden="true"><div class="semicircle">180°</div><span></span><span></span></div>
+        <div><p class="eyebrow">The key insight</p><h2 id="principles-title">The proof is<br />in their hands.</h2><p>An angle’s opening stays the same even when students carry it somewhere new, rotate it, or make its arc larger. When an acute and obtuse wedge click into a straight line, supplementary angles stop being a rule to remember and become a physical fact: <strong>180°.</strong></p></div>
+      </section>
+
+      <section class="outcomes" aria-labelledby="outcomes-title">
+        <p class="eyebrow">What students discover</p><h2 id="outcomes-title">One construction. Many relationships.</h2>
+        <div class="outcomes-list"><span>Corresponding angles</span><span>Alternate interior angles</span><span>Vertically opposite angles</span><span>Alternate exterior angles</span><span>Supplementary angles</span></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="#top"><span class="brand-mark">∠</span> Discover Geometry</a><p>Geometry is a place to explore.</p></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
